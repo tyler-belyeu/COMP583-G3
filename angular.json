@@ -25,7 +25,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -95,8 +94,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "f48ea285-b365-4dd2-bbf5-f127e6a80b5f"
   }
 }
