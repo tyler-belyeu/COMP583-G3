@@ -1,0 +1,64 @@
+/* Toolbar */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    }
+    
+    .toolbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    }
+    
+    .toolbar a.positronx {
+    font-weight: bold;
+    font-size: 1.2em;
+    }
+    
+    .nav-tool-items {
+    display: flex;
+    align-items: center;
+    }
+    
+    /* Signup Form */
+    .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    }
+    
+    .signup-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+    }
+    
+    .signup-card h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    }
+    
+    .signup-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .signup-card button.signup-button {
+    margin-top: 30px;
+    }
+    
+    /* This component includes styles for the toolbar and signup form,
+    and uses classes to target specific elements within each section.
+    You can include this CSS in your project and link it to the corresponding HTML
+    file to apply these styles. */

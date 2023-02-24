@@ -1,0 +1,37 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <div><a href="https://www.positronx.io" target="_blank" class="positronx">PositronX.io</a></div>
+    <span class="nav-tool-items">
+      <a mat-button routerLink="login" routerLinkActive="active">Log in</a>
+      <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Register</a>
+    </span>
+  </div>
+  <!-- Signup Form -->
+  <div class="content" role="main">
+    <div class="card signup-card">
+      <h2>Sign Up</h2>
+      <form>
+        <mat-form-field appearance="fill">
+          <mat-label>Full Name</mat-label>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="email">
+          </mat-form-field>
+        
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password">
+          </mat-form-field>
+        
+          <mat-form-field appearance="fill">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password">
+          </mat-form-field>
+        
+          <button mat-button class="signup-button">Sign Up</button>
+        </form>
+          </div>
+        </div>
+        <link rel="stylesheet" href="register.component.css">
