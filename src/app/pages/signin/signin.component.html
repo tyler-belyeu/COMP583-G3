@@ -19,7 +19,10 @@
               </mat-error>
           </mat-form-field>
           <button mat-button [disabled]="!form.get('email')!.valid">Recover password</button>
-          <button mat-raised-button color="primary" [disabled]="!form.valid">LOGIN</button>
+          <button mat-raised-button color="primary" [disabled]="!form.valid"
+            (click)="login()"
+            *ngIf="!isLoggingIn"
+            >LOGIN</button>
           <button mat-stroked-button color="primary">REGISTER</button>
       </form>
 </main>

@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const routes: Routes = [
 {
@@ -23,6 +25,8 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatButtonModule,
     MatInputModule,
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ]
 })
 export class SigninModule { }
