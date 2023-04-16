@@ -1,19 +1,27 @@
-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-}
-
-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-form button, mat-form-field{
-    width: -webkit-fill-available;
-    margin: 5px 0;
-}
+/* Set a max-width for the form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Add padding and margin to the form fields */
+  mat-form-field {
+    margin: 10px 0;
+    width: 100%;
+  }
+  
+  /* Adjust the width of the buttons */
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  /* Add media queries for smaller screens */
+  @media screen and (max-width: 600px) {
+    /* Set the form to 100% width */
+    form {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  

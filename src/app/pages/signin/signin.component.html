@@ -1,28 +1,38 @@
+<!-- HTML code for a form with input fields for email and password -->
 <main>
-    <form [formGroup]="form">
-        <h1>Join With Your Account</h1>
-        <mat-form-field>
-          <mat-label>Email</mat-label>
-          <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
-          <mat-error *ngIf="form.get('email')!.hasError('required')">
-            Email is Required
+  <!-- A form group is defined with the name "form" -->
+  <form [formGroup]="form">
+      <!-- A heading for the form is added -->
+      <h1>Join With Your Account</h1>
+      <!-- A material form field for email input is defined with a label and placeholder -->
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+        <!-- Error messages are displayed based on the form validation -->
+        <mat-error *ngIf="form.get('email')!.hasError('required')">
+          Email is Required
+        </mat-error>
+        <mat-error *ngIf="form.get('email')!.hasError('email')">
+          Email is Invalid
+        </mat-error>
+      </mat-form-field>
+      <!-- A material form field for password input is defined with a label and placeholder -->
+      <mat-form-field >
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Password" formControlName="password">
+          <!-- Error messages are displayed based on the form validation -->
+          <mat-error *ngIf="form.get('password')!.hasError('required')">
+              Password is Required
           </mat-error>
-          <mat-error *ngIf="form.get('email')!.hasError('email')">
-            Email is Invalid
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field >
-            <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="Password" formControlName="password">
-            <mat-error *ngIf="form.get('password')!.hasError('required')">
-                Password is Required
-              </mat-error>
-          </mat-form-field>
-          <button mat-button [disabled]="!form.get('email')!.valid">Recover password</button>
-          <button mat-raised-button color="primary" [disabled]="!form.valid"
-            (click)="login()"
-            *ngIf="!isLoggingIn"
-            >LOGIN</button>
-          <button mat-stroked-button color="primary">REGISTER</button>
-      </form>
+      </mat-form-field>
+      <!-- A button is added for password recovery, and it is disabled if the email input is invalid -->
+      <button mat-button [disabled]="!form.get('email')!.valid">Recover password</button>
+      <!-- A button is added for login, and it is disabled if the form is invalid -->
+      <button mat-raised-button color="primary" [disabled]="!form.valid"
+          (click)="login()"
+          *ngIf="!isLoggingIn"
+          >LOGIN</button>
+      <!-- A button is added for registration with a stroked style -->
+      <button mat-stroked-button color="primary">REGISTER</button>
+  </form>
 </main>
