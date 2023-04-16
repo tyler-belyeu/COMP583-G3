@@ -1,0 +1,18 @@
+.content{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.view{
+    display: inline-block;
+}
+
+.enter{
+  
+}
+
+button.delete:hover {
+    background-color: #525252;
+    color: white;
+  }

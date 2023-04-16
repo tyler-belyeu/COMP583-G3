@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class IngredientsComponent {
 
   fruits: Array<string> = ['Apple', 'Orange', 'Banana'];
+
+  addIngredient(s: string){
+    this.fruits.push(s);
+  }
+
+  removeIngredient(s: string){
+    this.fruits = this.fruits.filter(h => h !== s);
+  }
 }
