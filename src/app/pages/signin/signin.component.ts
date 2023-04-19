@@ -44,4 +44,9 @@ export class SigninComponent implements OnInit{
     });
     
   }
+
+  goToSignUp()
+  {
+    this.router.navigate(['signup']);
+  }
 }
