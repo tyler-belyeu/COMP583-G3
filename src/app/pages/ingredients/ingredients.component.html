@@ -1,0 +1,19 @@
+<div class="content">
+    <div class="view">
+        <h1>Current Ingredients</h1>
+        <ul *ngFor="let fruit of fruits">
+            <li>{{fruit}}
+                <button class="delete" type="submit" (click)="removeIngredient(fruit)">x</button>
+            </li>
+        </ul>
+        <div class="enter">
+
+                <h3>Enter your Ingredient:</h3>
+                <input type="text" placeholder="Enter an ingredient..." #item>
+                <button type="submit" (click)="addIngredient(item.value); item.value='' ">Add</button>
+            
+           
+            
+        </div>
+    </div>
+</div>

@@ -7,11 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { environment } from '../enviornments/enviornment.defaults';
+import { IngredientsComponent } from './pages/ingredients/ingredients.component';
+import { RecipesComponent } from './pages/recipes/recipes.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IngredientsComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
