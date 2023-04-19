@@ -1,0 +1,38 @@
+<main>
+    <form [formGroup]="form">
+        <h1>Create Your Account</h1>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+          <mat-error *ngIf="form.get('email')!.hasError('required')">
+            Email is Required
+          </mat-error>
+          <mat-error *ngIf="form.get('email')!.hasError('email')">
+            Email is Invalid
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Password" formControlName="password" (input)="onPasswordInput()">
+            <mat-error *ngIf="form.get('password')!.hasError('required')">
+                Password is Required
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label>Confirm Password</mat-label>
+            <input type="password" matInput placeholder="Confirm Password" formControlName="password2" (input)="onPasswordInput()">
+            <mat-error *ngIf="form.get('password2')!.hasError('required')">
+                Please confirm your Password
+            </mat-error>
+            <mat-error *ngIf="form.get('password2')!.invalid && !form.get('password2')!.hasError('required')">
+                Passwords don't match
+            </mat-error>
+        </mat-form-field>
+        <button mat-button [disabled]="!form.get('email')!.valid">Recover password</button>
+        <button mat-raised-button color="primary" [disabled]="!form.valid"
+        (click)="register()"
+        *ngIf="!isRegistering"
+        >REGISTER</button>
+        <button mat-stroked-button color="primary" (click)="goToSignIn()">LOGIN</button>
+      </form>
+</main>
