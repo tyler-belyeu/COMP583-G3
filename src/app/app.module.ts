@@ -9,18 +9,22 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { environment } from '../enviornments/enviornment.defaults';
 import { IngredientsComponent } from './pages/ingredients/ingredients.component';
 import { RecipesComponent } from './pages/recipes/recipes.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     IngredientsComponent,
-    RecipesComponent
+    RecipesComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
 
     AngularFireModule.initializeApp({
       apiKey: environment.firebase.apiKey,
