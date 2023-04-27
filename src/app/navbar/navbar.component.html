@@ -1,3 +1,11 @@
-<mat-toolbar>
-   <span>My Navbar</span>
-  </mat-toolbar>
+<p>
+    <mat-toolbar color="primary">
+      <button mat-flat-button color="accent" (click)="navigateToPage('recipes')">Recipes</button>
+      <button mat-flat-button color="warn" (click)="navigateToPage('favorites')">Favorites<mat-icon>favorite</mat-icon></button>
+      <span>Recipe.AI</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
