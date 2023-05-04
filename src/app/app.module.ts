@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
+import { ViewRecipeComponent } from './pages/view-recipe/view-recipe.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FavoritesComponent } from './pages/favorites/favorites.component';
     IngredientsComponent,
     RecipesComponent,
     NavbarComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    ViewRecipeComponent
   ],
   imports: [
     BrowserModule,

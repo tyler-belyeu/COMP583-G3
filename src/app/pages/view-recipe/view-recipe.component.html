@@ -1,0 +1,10 @@
+<app-navbar></app-navbar>
+<h1>{{recipe.title}}</h1>
+<h2>Ingredients:</h2>
+<ul *ngFor="let ingredient of recipe.ingredients">
+    <li>{{ingredient}}</li>
+</ul>
+<h2>Steps:</h2>
+<ol>
+    <li *ngFor="let step of recipe.steps">{{step}}</li>
+</ol>
