@@ -1,48 +1,58 @@
-/* Default styles */
-.home-screen {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.home-screen button {
-  background-color: purple;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  margin: 1rem;
-  transition: all 0.3s ease-in-out;
-  text-align: center;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.home-screen button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.home-screen button:active {
-  transform: translateY(2px);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Media queries */
-@media (max-width: 768px) {
-  .home-screen {
-    flex-direction: column;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f958;
+    height: 60px;
+    padding: 0 20px;
   }
   
-  .home-screen button {
-    margin: 0.5rem;
+  .navbar-left {
+    display: flex;
+    align-items: center;
   }
-}
-
-@media (max-width: 480px) {
-  .home-screen button {
-    font-size: 0.8rem;
+  
+  .navbar-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
   }
-}
+  
+  .navbar-button:hover {
+    background-color: #0069d9;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-profile-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .navbar-profile-button i {
+    color: #007bff;
+    font-size: 24px;
+  }
+  
+  .navbar-profile-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .recipe-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }

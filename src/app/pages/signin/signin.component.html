@@ -1,16 +1,28 @@
-<body>
-  <div class="overlay"></div>
-  <form action="index.html" method="post" class="box" novalidate>
-    <div class="header">
-      <h4>Login To Your Account</h4>
-      <p>Welcome to Recepie AI! Log in to explore a world of delightful flavors and personalized culinary experiences, crafted by the perfect blend of artificial intelligence and gastronomic expertise. Let's embark on a journey to savor the best dishes tailored for you!</p>
-    </div>
-    <div class="login-area">
-      <input type="email" class="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-      <input type="password" class="password" placeholder="Password" required>
-      <input type="submit" value="Login" class="submit">
-      <a href="">New User?</a>
-      <a href="#">Forgot Password?</a>
-    </div>
-  </form>
-</body>
+<main>
+    <form [formGroup]="form">
+        <h1>Join With Your Account</h1>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+          <mat-error *ngIf="form.get('email')!.hasError('required')">
+            Email is Required
+          </mat-error>
+          <mat-error *ngIf="form.get('email')!.hasError('email')">
+            Email is Invalid
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="Password" formControlName="password">
+            <mat-error *ngIf="form.get('password')!.hasError('required')">
+                Password is Required
+              </mat-error>
+          </mat-form-field>
+          <button mat-button [disabled]="!form.get('email')!.valid">Recover password</button>
+          <button mat-raised-button color="primary" [disabled]="!form.valid"
+            (click)="login()"
+            *ngIf="!isLoggingIn"
+            >LOGIN</button>
+          <button mat-stroked-button color="primary" (click)="goToSignUp()">REGISTER</button>
+      </form>
+</main>
