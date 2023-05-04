@@ -1,9 +1,9 @@
 <app-navbar></app-navbar>
-<h2>My Recipes</h2>
+<h2>My Favorite Recipes</h2>
 <ul *ngFor="let recipe of recipes">
     <li>{{recipe}}</li>
     <button (click)="navigateToPage('view-recipe')">View</button>
     <button>Delete</button>
-    <button (click)="navigateToPage('favorites')">Favorite</button>
+    <button>Un-Favorite</button>
 
 </ul>
