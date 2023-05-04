@@ -13,6 +13,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { HomeComponent } from './pages/home/home.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { ViewRecipeComponent } from './pages/view-recipe/view-recipe.component';
 
@@ -23,8 +24,9 @@ import { ViewRecipeComponent } from './pages/view-recipe/view-recipe.component';
     IngredientsComponent,
     RecipesComponent,
     NavbarComponent,
+    HomeComponent,
     FavoritesComponent,
-    ViewRecipeComponent
+    ViewRecipeComponent,
   ],
   imports: [
     BrowserModule,
