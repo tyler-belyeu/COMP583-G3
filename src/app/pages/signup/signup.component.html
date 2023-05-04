@@ -1,38 +1,39 @@
-<main>
-    <form [formGroup]="form">
-        <h1>Create Your Account</h1>
-        <mat-form-field>
-          <mat-label>Email</mat-label>
-          <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
-          <mat-error *ngIf="form.get('email')!.hasError('required')">
-            Email is Required
-          </mat-error>
-          <mat-error *ngIf="form.get('email')!.hasError('email')">
-            Email is Invalid
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field >
-            <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="Password" formControlName="password" (input)="onPasswordInput()">
-            <mat-error *ngIf="form.get('password')!.hasError('required')">
-                Password is Required
-            </mat-error>
-        </mat-form-field>
-        <mat-form-field >
-            <mat-label>Confirm Password</mat-label>
-            <input type="password" matInput placeholder="Confirm Password" formControlName="password2" (input)="onPasswordInput()">
-            <mat-error *ngIf="form.get('password2')!.hasError('required')">
-                Please confirm your Password
-            </mat-error>
-            <mat-error *ngIf="form.get('password2')!.invalid && !form.get('password2')!.hasError('required')">
-                Passwords don't match
-            </mat-error>
-        </mat-form-field>
-        <button mat-button [disabled]="!form.get('email')!.valid">Recover password</button>
-        <button mat-raised-button color="primary" [disabled]="!form.valid"
-        (click)="register()"
-        *ngIf="!isRegistering"
-        >REGISTER</button>
-        <button mat-stroked-button color="primary" (click)="goToSignIn()">LOGIN</button>
-      </form>
-</main>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector(".box");
+      form.addEventListener("submit", function (event) {
+        const emailInput = document.querySelector(".email");
+        const email = emailInput.value;
+        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address.");
+          event.preventDefault();
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="overlay"></div>
+  <form action="home.html" method="post" class="box">
+    <div class="header">
+      <h4>Create a New Account</h4>
+      <p>"Welcome to Recepie AI, where technology meets taste! Join our community and explore a world of culinary possibilities powered by our cutting-edge AI. Get personalized recipes  and food suggestions tailored to your preferences and dietary needs. Sign up now and start your journey towards a smarter, more delicious dining experience!"</p>
+    </div>
+    <div class="signup-area">
+      <input type="text" class="username" placeholder="Username" required>
+      <input type="email" class="email" placeholder="Email" required>
+      <input type="password" class="password" placeholder="Password" required>
+      <input type="password" class="confirm-password" placeholder="Confirm Password" required>
+      <input type="submit" value="Sign Up" class="submit">
+      <a href="#">Already have an account? Login</a>
+    </div>
+  </form>
+</body>
+</html>
