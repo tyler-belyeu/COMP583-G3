@@ -2,7 +2,7 @@
 <h2>My Favorite Recipes</h2>
 <ul *ngFor="let recipe of recipes">
     <li>{{recipe}}</li>
-    <button>View</button>
+    <button (click)="navigateToPage('view-recipe')">View</button>
     <button>Delete</button>
     <button>Un-Favorite</button>
 

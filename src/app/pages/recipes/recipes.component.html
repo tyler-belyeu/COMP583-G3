@@ -2,8 +2,8 @@
 <h2>My Recipes</h2>
 <ul *ngFor="let recipe of recipes">
     <li>{{recipe}}</li>
-    <button>View</button>
+    <button (click)="navigateToPage('view-recipe')">View</button>
     <button>Delete</button>
-    <button>Favorite</button>
+    <button (click)="navigateToPage('favorites')">Favorite</button>
 
 </ul>
