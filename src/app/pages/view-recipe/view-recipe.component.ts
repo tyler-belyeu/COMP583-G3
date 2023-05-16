@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RecipeService } from '../recipes/services/recipe.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-recipe',
@@ -6,8 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./view-recipe.component.css']
 })
 export class ViewRecipeComponent {
+
+  constructor(private mockRecipe: RecipeService){}
   recipe = {
-    title : 'Mashed Potatoes',
+    name : 'Mashed Potatoes',
     ingredients : [
       'potato',
       'boiling water',
@@ -22,4 +26,10 @@ export class ViewRecipeComponent {
       'Eat the mashed potatoes'
     ]
   }
+
+  setRecipe(){
+    const newRecipe = this.mockRecipe.getMockRecipe();
+    this.recipe = newRecipe;
+  }
+
 }

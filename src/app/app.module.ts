@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './pages/home/home.component';
 import { FavoritesComponent } from './pages/favorites/favorites.component';
 import { ViewRecipeComponent } from './pages/view-recipe/view-recipe.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { ViewRecipeComponent } from './pages/view-recipe/view-recipe.component';
       measurementId: environment.firebase.measurementId
     }),
     AngularFireAuthModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

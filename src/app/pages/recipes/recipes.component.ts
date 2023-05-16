@@ -12,6 +12,11 @@ export class RecipesComponent {
   navigateToPage(url: string) {
     this.router.navigateByUrl(url);
   }
+
+  removeRecipe(s: string){
+    this.recipes = this.recipes.filter(h => h !== s);
+  }
+
   recipes: Array<string> = [
     'Chicken Cauliflower Soup with Cheese Biscuits',
     'Chicken Hills and Tortilla Valleys',

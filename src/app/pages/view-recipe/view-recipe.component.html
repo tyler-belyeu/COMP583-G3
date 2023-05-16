@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<h1>{{recipe.title}}</h1>
+<h1>{{recipe.name}}</h1>
 <h2>Ingredients:</h2>
 <ul *ngFor="let ingredient of recipe.ingredients">
     <li>{{ingredient}}</li>
@@ -8,3 +8,5 @@
 <ol>
     <li *ngFor="let step of recipe.steps">{{step}}</li>
 </ol>
+
+<button (click)="setRecipe()">refresh</button>

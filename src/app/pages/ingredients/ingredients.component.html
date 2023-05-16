@@ -4,7 +4,7 @@
         <h1>Current Ingredients</h1>
         <ul *ngFor="let fruit of fruits">
             <li>{{fruit}}
-                <button class="delete" type="submit" (click)="removeIngredient(fruit)">x</button>
+                <button mat-mini-fab color="warn" class="delete" type="submit" (click)="removeIngredient(fruit)"><mat-icon>delete</mat-icon></button>
             </li>
         </ul>
         <div class="enter">
@@ -17,7 +17,7 @@
             
         </div>
         <div class="submit">
-            <button>Generate Recipe</button>
+            <button (click)="getMockRecipe()">Generate Recipe</button>
         </div>
     </div>
 </div>

@@ -2,8 +2,8 @@
 <h2>My Favorite Recipes</h2>
 <ul *ngFor="let recipe of recipes">
     <li>{{recipe}}</li>
-    <button (click)="navigateToPage('view-recipe')">View</button>
-    <button>Delete</button>
-    <button>Un-Favorite</button>
+    <button mat-flat-button (click)="navigateToPage('view-recipe')">View</button>
+    <!-- <button>Delete</button> -->
+    <button  mat-flat-button color='primary' (click)="unFavorite(recipe)">Un-Favorite</button>
 
 </ul>

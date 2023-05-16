@@ -19,4 +19,8 @@ export class FavoritesComponent {
     'Oven Roast Beef',
     'Cheddar Rice Skillet',
   ]
+
+  unFavorite(s: string){
+    this.recipes = this.recipes.filter(h => h !== s);
+  }
 }

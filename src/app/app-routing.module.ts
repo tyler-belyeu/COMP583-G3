@@ -35,7 +35,10 @@ const routes: Routes = [
     path: 'view-recipe',
     loadChildren: () => import('./pages/view-recipe/view-recipe.module')
       .then(m => m.ViewRecipeModule)
-  }
+  },
+  {
+    path: '', pathMatch: 'full', redirectTo: 'signup'
+  },
 ];
 
 @NgModule({
